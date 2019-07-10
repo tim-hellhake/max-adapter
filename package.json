@@ -1,0 +1,58 @@
+{
+  "name": "max-adapter",
+  "display_name": "MAX!",
+  "version": "0.1.0",
+  "description": "Connect your MAX! devices",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tim-hellhake/max-adapter.git"
+  },
+  "author": "Tim Hellhake",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/tim-hellhake/max-adapter/issues"
+  },
+  "homepage": "https://github.com/tim-hellhake/max-adapter#readme",
+  "files": [
+    "LICENSE",
+    "SHA256SUMS",
+    "lib/index.js",
+    "lib/max-adapter.js"
+  ],
+  "moziot": {
+    "api": {
+      "min": 2,
+      "max": 2
+    },
+    "plugin": true,
+    "exec": "{nodeLoader} {path}",
+    "config": {
+      "defaultLanguage": "en"
+    },
+    "schema": {
+      "type": "object",
+      "required": [
+        "serialPort"
+      ],
+      "properties": {
+        "serialPort": {
+          "type": "string",
+          "title": "The serial port"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "cul": "^0.12.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.2",
+    "@types/node": "^12.0.12"
+  }
+}
