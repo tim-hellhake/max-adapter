@@ -1,0 +1,36 @@
+{
+  "manifest_version": 1,
+  "id": "max-adapter",
+  "name": "MAX!",
+  "short_name": "MAX!",
+  "version": "0.1.3",
+  "description": "Connect your MAX! devices",
+  "homepage_url": "https://github.com/tim-hellhake/max-adapter#readme",
+  "license": "MPL-2.0",
+  "author": "Tim Hellhake",
+  "gateway_specific_settings": {
+    "webthings": {
+      "exec": "{nodeLoader} {path}",
+      "strict_min_version": "0.10.0",
+      "strict_max_version": "*",
+      "primary_type": "adapter"
+    }
+  },
+  "options": {
+    "default": {
+      "defaultLanguage": "en"
+    },
+    "schema": {
+      "type": "object",
+      "required": [
+        "serialPort"
+      ],
+      "properties": {
+        "serialPort": {
+          "type": "string",
+          "title": "The serial port"
+        }
+      }
+    }
+  }
+}
