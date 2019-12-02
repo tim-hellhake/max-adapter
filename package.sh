@@ -1,6 +1,7 @@
 #!/bin/bash
 
 rm -rf node_modules
+
 if [ -z "${ADDON_ARCH}" ]; then
   TARFILE_SUFFIX=
 else
@@ -15,6 +16,8 @@ if [[ "${ADDON_ARCH}" =~ "linux-arm" ]]; then
 else
   npm install
 fi
+
+rm -rf node_modules/.bin
 
 rm -f SHA256SUMS
 npm run build
