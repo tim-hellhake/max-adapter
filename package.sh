@@ -31,3 +31,5 @@ cp -r node_modules ./package
 tar czf ${TARFILE_ARCH} package
 rm -rf package
 echo "Created ${TARFILE_ARCH}"
+
+shasum --algorithm 256 ${TARFILE_ARCH} > ${TARFILE_ARCH}.sha256sum
