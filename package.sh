@@ -1,5 +1,7 @@
 #!/bin/bash
 
+npm ci
+npm run build
 rm -rf node_modules
 
 if [ -z "${ADDON_ARCH}" ]; then
@@ -20,7 +22,6 @@ fi
 rm -rf node_modules/.bin
 
 rm -f SHA256SUMS
-npm run build
 sha256sum package.json manifest.json lib/*.js LICENSE README.md > SHA256SUMS
 find node_modules -type f -exec sha256sum {} \; >> SHA256SUMS
 TARFILE="$(npm pack)"
