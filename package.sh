@@ -13,10 +13,10 @@ fi
 # For openwrt-linux-arm and linux-arm we need to cross compile.
 if [[ "${ADDON_ARCH}" =~ "linux-arm" ]]; then
   # We assume that CC and CXX are pointing to the cross compilers
-  npm install --ignore-scripts
+  npm install --production --ignore-scripts
   npm rebuild --arch=armv6l --target_arch=arm
 else
-  npm install
+  npm install --production
 fi
 
 rm -rf node_modules/.bin
