@@ -26,29 +26,6 @@
     "lib/index.js",
     "lib/max-adapter.js"
   ],
-  "moziot": {
-    "api": {
-      "min": 2,
-      "max": 2
-    },
-    "plugin": true,
-    "exec": "{nodeLoader} {path}",
-    "config": {
-      "defaultLanguage": "en"
-    },
-    "schema": {
-      "type": "object",
-      "required": [
-        "serialPort"
-      ],
-      "properties": {
-        "serialPort": {
-          "type": "string",
-          "title": "The serial port"
-        }
-      }
-    }
-  },
   "dependencies": {
     "cul": "^0.15.0"
   },
