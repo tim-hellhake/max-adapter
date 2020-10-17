@@ -3,7 +3,7 @@
   "id": "max-adapter",
   "name": "MAX!",
   "short_name": "MAX!",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Connect your MAX! devices",
   "homepage_url": "https://github.com/tim-hellhake/max-adapter#readme",
   "license": "MPL-2.0",
